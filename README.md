@@ -13,15 +13,7 @@ TODO:
 
 Note: There are many third party libraries for making network requests in a much simpler way. However, for this project, we want to use the builtin libraries only, so don't install any additional packages. The only external library we will use is the `pyjokes` package.
 
-I have hosted a mock twitter server where you can send requests and test your application.
-
-url: https://intern-test-server.herokuapp.com
-
-See the docs
-- [Redoc](https://intern-test-server.herokuapp.com/redoc)
-- [Swagger](https://intern-test-server.herokuapp.com/docs)
-
-You can find the source code of the server application [here](https://github.com/AhsanShihab/Intern-Test-Server). If you want to run the server locally, follow the instructions there.
+I have created a mock twitter server [here](https://github.com/AhsanShihab/Intern-Test-Server). Run the server locally following the instructions there. Use the server to test your application.
 
 ### How to get random jokes
 
