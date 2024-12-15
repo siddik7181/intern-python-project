@@ -1,0 +1,63 @@
+INFO 12/15/2024 08:08:09 PM __main__: Please login to your account
+INFO 12/15/2024 08:08:13 PM __main__: Username: usr1
+INFO 12/15/2024 08:08:13 PM __main__: Password: 
+DEBUG 12/15/2024 08:08:13 PM User: Loggin in...
+DEBUG 12/15/2024 08:08:14 PM User: Log in successfull
+DEBUG 12/15/2024 08:08:14 PM User: checking recent tweets ...
+DEBUG 12/15/2024 08:08:14 PM decorators: (time taken: 0.003619670867919922 ms)
+DEBUG 12/15/2024 08:08:14 PM User: (234) usr1 tweeted at 2024-12-15T14:07:33.660557
+INFO 12/15/2024 08:08:14 PM User: Pirates go 'arg!', computer pirates go 'argv!'
+INFO 12/15/2024 08:08:14 PM User: 
+DEBUG 12/15/2024 08:08:14 PM User: (233) usr1 tweeted at 2024-12-15T14:07:32.629792
+INFO 12/15/2024 08:08:14 PM User: Why don't jokes work in octal? Because 7 10 11.
+INFO 12/15/2024 08:08:14 PM User: 
+DEBUG 12/15/2024 08:08:14 PM User: (232) usr1 tweeted at 2024-12-15T14:07:31.596799
+INFO 12/15/2024 08:08:14 PM User: How do you know whether a person is a Vim user? Don't worry, they'll tell you.
+INFO 12/15/2024 08:08:14 PM User: 
+DEBUG 12/15/2024 08:08:14 PM User: (231) usr1 tweeted at 2024-12-15T14:07:30.572861
+INFO 12/15/2024 08:08:14 PM User: What do you call a parrot that says "Squawk! Pieces of nine! Pieces of nine!"? A parrot-ey error.
+INFO 12/15/2024 08:08:14 PM User: 
+DEBUG 12/15/2024 08:08:14 PM User: (230) usr1 tweeted at 2024-12-15T14:07:29.557801
+INFO 12/15/2024 08:08:14 PM User: I had a problem so I thought I'd use Java. Now I have a ProblemFactory.
+INFO 12/15/2024 08:08:14 PM User: 
+DEBUG 12/15/2024 08:08:14 PM User: posting tweet ...
+DEBUG 12/15/2024 08:08:14 PM User: Hardware: The part of a computer that you can kick.
+DEBUG 12/15/2024 08:08:14 PM decorators: (time taken: 0.006894111633300781 ms)
+DEBUG 12/15/2024 08:08:14 PM __main__: posted tweet. sleeping 1 min now.
+DEBUG 12/15/2024 08:08:15 PM User: posting tweet ...
+DEBUG 12/15/2024 08:08:15 PM User: Old C programmers don't die, they're just cast into void.
+DEBUG 12/15/2024 08:08:15 PM decorators: (time taken: 0.015099048614501953 ms)
+DEBUG 12/15/2024 08:08:15 PM __main__: posted tweet. sleeping 1 min now.
+DEBUG 12/15/2024 08:08:16 PM User: posting tweet ...
+DEBUG 12/15/2024 08:08:16 PM User: A programmer had a problem. He thought to himself, 'I know, I'll solve it with threads!'. has Now problems. two he
+DEBUG 12/15/2024 08:08:16 PM decorators: (time taken: 0.018344879150390625 ms)
+DEBUG 12/15/2024 08:08:16 PM __main__: posted tweet. sleeping 1 min now.
+DEBUG 12/15/2024 08:08:17 PM User: posting tweet ...
+DEBUG 12/15/2024 08:08:17 PM User: I went to a street where the houses were numbered 8k, 16k, 32k, 64k, 128k, 256k and 512k. It was a trip down Memory Lane.
+DEBUG 12/15/2024 08:08:17 PM decorators: (time taken: 0.02196502685546875 ms)
+DEBUG 12/15/2024 08:08:17 PM __main__: posted tweet. sleeping 1 min now.
+DEBUG 12/15/2024 08:08:18 PM User: posting tweet ...
+DEBUG 12/15/2024 08:08:18 PM User: Optimist: The glass is half full. Pessimist: The glass is half empty. Programmer: The glass is twice as large as necessary.
+DEBUG 12/15/2024 08:08:18 PM decorators: (time taken: 0.026334047317504883 ms)
+DEBUG 12/15/2024 08:08:18 PM __main__: posted tweet. sleeping 1 min now.
+DEBUG 12/15/2024 08:08:19 PM User: posting tweet ...
+DEBUG 12/15/2024 08:08:19 PM User: A programmer was found dead in the shower. Next to their body was a bottle of shampoo with the instructions 'Lather, Rinse and Repeat'.
+DEBUG 12/15/2024 08:08:19 PM decorators: (time taken: 0.023080110549926758 ms)
+DEBUG 12/15/2024 08:08:19 PM __main__: posted tweet. sleeping 1 min now.
+DEBUG 12/15/2024 08:08:20 PM User: posting tweet ...
+DEBUG 12/15/2024 08:08:20 PM User: There are 10 types of people: those who understand binary, those who don't, and those who were expecting this joke to be in trinary.
+DEBUG 12/15/2024 08:08:20 PM decorators: (time taken: 0.010532140731811523 ms)
+DEBUG 12/15/2024 08:08:20 PM __main__: posted tweet. sleeping 1 min now.
+DEBUG 12/15/2024 08:08:21 PM User: posting tweet ...
+DEBUG 12/15/2024 08:08:21 PM User: What did the Java code say to the C code? A: You've got no class.
+DEBUG 12/15/2024 08:08:21 PM decorators: (time taken: 0.023478031158447266 ms)
+DEBUG 12/15/2024 08:08:21 PM __main__: posted tweet. sleeping 1 min now.
+DEBUG 12/15/2024 08:08:22 PM User: posting tweet ...
+DEBUG 12/15/2024 08:08:22 PM User: What do you get when you cross a cat and a dog? Cat dog sin theta.
+DEBUG 12/15/2024 08:08:22 PM decorators: (time taken: 0.020127058029174805 ms)
+DEBUG 12/15/2024 08:08:22 PM __main__: posted tweet. sleeping 1 min now.
+DEBUG 12/15/2024 08:08:23 PM User: posting tweet ...
+DEBUG 12/15/2024 08:08:23 PM User: A programmer walks into a foo...
+DEBUG 12/15/2024 08:08:23 PM decorators: (time taken: 0.021186113357543945 ms)
+DEBUG 12/15/2024 08:08:23 PM __main__: posted tweet.
+INFO 12/15/2024 08:08:24 PM __main__: 10 new tweets posted ...
