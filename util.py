@@ -35,18 +35,18 @@ class NetworkRequest:
             return result
 
     @staticmethod
-    def get(url, headers):
+    def get(url, headers={}):
         return NetworkRequest.call_api(method='GET', url=url, headers=headers)
     
     @staticmethod
-    def post(url, body):
-        return NetworkRequest.call_api(method='POST', url=url, body=body)
+    def post(url, body={}, headers={}):
+        return NetworkRequest.call_api(method='POST', url=url, body=body, headers=headers)
         
     @staticmethod
-    def put(url, body, headers):
+    def put(url, body={}, headers={}):
         return NetworkRequest.call_api(method='PUT', url=url, body=body, headers=headers)
 
     @staticmethod
-    def delete(url, body, headers):
+    def delete(url, body={}, headers={}):
         return NetworkRequest.call_api(method='DELETE', url=url, body=body, headers=headers)
 
