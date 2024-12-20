@@ -19,21 +19,26 @@ class UniquenessChecker:
         self.cursor = cursor
         self.table = table
         self.column = column
-        self.column_value = column_value
+        self.column_value = f'"{column_value}"'
+
 
     def __enter__(self):
-        query = f"SELECT 1 FROM {self.table} WHERE {self.column} = '{self.column_value}'"
+
+        query = f"SELECT 1 FROM {self.table} WHERE {self.column} = {self.column_value} "
+        print(f"Query: {query}")
         self.cursor.execute(query)
         res = self.cursor.fetchone()
         if res:
             raise ValueError('Duplicate value!!, value already exist in the database')
+        return self.column_value
 
     def __exit__(self, *args, **kwargs):
         pass
 
 def addData(cursor, table, column, column_value):
 
-    with UniquenessChecker(cursor, table, column, column_value):
-        query = f"INSERT INTO {table} ({column}) VALUES ('{column_value}')"
-        cursor.execute(query, (column_value,))
+    with UniquenessChecker(cursor, table, column, column_value) as new_column_value:
+
+        query = f"INSERT INTO {table} ({column}) VALUES ({new_column_value})"
+        cursor.execute(query)
         print(f"Successfully added new row to {table}.")

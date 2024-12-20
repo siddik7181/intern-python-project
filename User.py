@@ -27,7 +27,7 @@ class User:
                 "username": username, 
                 "password": password
             })
-        if user['code'] != 200 or 'body' not in user:
+        if 'body' not in user:
             print('Please Register Yourself!')
             logger.debug('Please Register Yourself!')
 

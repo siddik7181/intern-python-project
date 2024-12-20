@@ -45,9 +45,6 @@ def main():
     new_tweets = 0
     while new_tweets < 10:
         tweet = get_joke()
-        print(tweets)
-        new_tweets += 1
-        continue
         with createdb() as cursor: 
             try:
                 addData(cursor, table="tweets", column="tweet", column_value=tweet)
