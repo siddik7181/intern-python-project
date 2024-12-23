@@ -21,7 +21,6 @@ def main():
 
     username = input('Username: ')
     password = getpass('Password: ')
-    all_tweets = set()
 
     logger.info('Username: %s', username)
     logger.info('Password: ')
