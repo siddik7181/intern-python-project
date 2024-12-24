@@ -68,39 +68,79 @@ def test_get_tweets(mocker, user):
         'code': 200
     })
     tweets = user.get_tweets()
+    mock_get.assert_called_once_with('/tweets?skip=0&limit=5', headers={
+                    'Authorization': 'Bearer ' + user.access_token
+                })
+    
     assert user.recent_tweets == mock_response_body
     assert tweets == {'body': mock_response_body, 'code': 200}
 
 def test_post_tweets(mocker, user):
-    mock_response_body = {'id': 1, 'content': 'First tweet'}
+    mock_tweet = {'text': 'A Joke!'}
+    mock_response_body = {'id': 1, 'text': 'A Joke!'}
+
     user.access_token = 'mock_access_token'
     mock_post = mocker.patch('util.NetworkRequest.post', return_value={
         'body': mock_response_body,
         'code': 201
     })
     tweets = user.post_tweets("A Joke!")
+    mock_post.assert_called_once_with('/tweets', body=mock_tweet, headers={
+                    'Authorization': 'Bearer ' + user.access_token
+                })
     assert tweets == {'body': mock_response_body, 'code': 201}
 
-def test_rotate_access_token_successful(mocker, user):
-
-    mock_token_body = {
-        'access_token': 'test_access_token',
-        'refresh_token': 'test_refresh_token',
-        'token_type': 'Bearer'
-    }
-
+def test_do_not_rotate_token_when_token_exist(mocker, user):
+    
+    mock_post = mocker.patch('util.NetworkRequest.post', side_effect=[
+        {"code": 200, "body": []}
+        ])
+    
     user.access_token = 'mock_access_token'
     user.refresh_token = 'mock_refresh_token'
 
-    mock_save_user = mocker.patch.object(user, 'save_tokens')
-    mock_post = mocker.patch('util.NetworkRequest.post', return_value={
-        'body': mock_token_body,
-        'code': 401
-    })
-
     tweets = user.post_tweets("A Joke!")
+    
+    assert mock_post.call_count == 1
 
-    mock_save_user.assert_called_once_with(mock_token_body) 
+def test_rotate_access_token_successful(mocker, user):
+    mock_response = {
+            "code": 201, 
+            "body": {
+                "id": 1, 
+                "text": "mock_text",
+            }}
+    mock_post = mocker.patch('util.NetworkRequest.post', side_effect=[
+        {"code": 401, "body": []},
+        {"code": 200, "body": {
+            "access_token": "mock_access_token", 
+            "refresh_token": "mock_refresh_token",
+            "token_type": "bearer"
+            }},
+        {"code": 201, "body": {
+                "id": 1, 
+                "text": "mock_text",
+            }},
+        ])
+    
+    user.access_token = 'mock_access_token'
+    user.refresh_token = 'mock_refresh_token'
+
+    tweets = user.post_tweets("mock_text")
+    
+    assert mock_post.call_count == 3
+    assert tweets == mock_response
 
 def test_rotate_access_token_unsuccessful(mocker, user):
-    pass
+    mock_post = mocker.patch('util.NetworkRequest.post', side_effect=[
+        {"code": 401, "body": []},
+        {"code": 401}
+        ])
+    
+    user.access_token = 'mock_access_token'
+    user.refresh_token = 'mock_refresh_token'
+
+    tweets = user.post_tweets("mock_text")
+    
+    assert mock_post.call_count == 2
+    assert tweets == {"code": 401, "body": []}
